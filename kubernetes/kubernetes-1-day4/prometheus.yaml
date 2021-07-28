@@ -1,0 +1,27 @@
+apiVersion: monitoring.coreos.com/v1
+kind: Prometheus
+metadata:
+  name: prometheus
+  labels:
+    prometheus: prometheus
+spec:
+  replicas: 1
+  serviceAccountName: default
+  serviceMonitorSelector:
+    matchLabels:
+      team: frontend
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: prometheus-public
+  labels:
+    app: prometheus
+spec:
+  ports:
+  - port: 9090
+    targetPort: 9090
+    name: http
+  selector:
+    app: prometheus
+  type: LoadBalancer
