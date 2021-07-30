@@ -17,3 +17,4 @@ Youtube Videos:
 * Cyber Kill Chain - https://lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html
 * Using the MITRE ATT&CK Framework as a Security Analyst, Threat Hunter, or Business Executive - https://www.youtube.com/watch?v=XwnhgVU7vKQ
 * NIST SP800-53 Revision 5 Security Controls for Information Systems and Organizations Part 1 Overview - https://www.youtube.com/watch?v=hWWILCZbDho&t=6s
+* Internet of THings Security - https://www.youtube.com/watch?v=pGtnC1jKpMg&ab_channel=TEDxTalks
