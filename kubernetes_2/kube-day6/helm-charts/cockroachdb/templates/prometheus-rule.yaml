@@ -1,0 +1,12 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: cockroachdb
+spec:
+  groups:
+  - name: cockroachdb.rules
+    rules:
+    - record: cockroachdb:capacity:utilizationPct
+      expr: capacity_used{store="1",namespace="{{ .Release.Namespace }}"}/capacity{store="1",namespace="{{ .Release.Namespace }}"}
+    - alert: cockroachdb above capacity
+      expr: cockroachdb:capacity:utilizationPct > 0.80
